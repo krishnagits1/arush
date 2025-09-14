@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adventures with Arush</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+    header {
+      background: #2b2b40;
+      color: #ffcc70;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #444466;
+      padding: 0.5rem;
+    }
+    nav a {
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      color: #ffcc70;
+      font-weight: bold;
+      background: #2b2b40;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      transition: all 0.3s;
+    }
+    nav a:hover {
+      background: #ff6f61;
+      color: white;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem;
+      background: url('https://cdn.pixabay.com/photo/2017/03/27/14/56/adventure-2181853_1280.jpg') center/cover;
+      color: white;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+    .hero img.cloud {
+      position: absolute;
+      width: 100px;
+      top: 20px;
+      animation: moveClouds 20s linear infinite;
+    }
+    @keyframes moveClouds {
+      0% { left: -150px; }
+      100% { left: 110%; }
+    }
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: #2b2b40;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s;
+      position: relative;
+      overflow: hidden;
+      color: #f0f0f0;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .floating-toy {
+      width: 60px;
+      position: absolute;
+      bottom: -80px;
+      animation: floatToy 6s ease-in-out infinite;
+    }
+    @keyframes floatToy {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+      100% { transform: translateY(0); }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #2b2b40;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+    form input, form textarea {
+      padding: 0.7rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+    }
+    form button {
+      padding: 0.7rem;
+      background: #ff6f61;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #ffcc70;
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #2b2b40;
+      color: #ffcc70;
+      margin-top: 2rem;
+      position: relative;
+    }
+    footer img.superhero {
+      width: 70px;
+      position: absolute;
+      top: -40px;
+      right: 10px;
+      animation: flyHero 10s linear infinite;
+    }
+    @keyframes flyHero {
+      0% { transform: translateX(-120%); top: -40px; }
+      50% { transform: translateX(50vw) translateY(-50px); }
+      100% { transform: translateX(120vw); top: -40px; }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Adventures with Arush 🌈</h1>
+    <p>Fun, Learning & Happy Moments</p>
+  </header>  <nav>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#stories">Stories</a>
+    <a href="#contact">Contact</a>
+  </nav>  <section class="hero">
+    <img class="cloud" src="cover.jpg" alt="Cloud">
+    <h2>Join Arush on his Colorful Adventures!</h2>
+    <p>Exploring the world with fun and joy ✨</p>
+    <img class="floating-toy" src="cover.jpg" alt="Toy">
+  </section>  <section id="about" class="section">
+    <h2>About Arush</h2>
+    <p>Hi! I’m Arush 👦, 7 years old, and I love exploring nature, toys, superheroes, and funny stories! This is my little corner to share my adventures with you. 🌟</p>
+  </section>  <section id="gallery" class="section">
+    <h2>Adventure Gallery 📸</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="fun.jpg" alt="Adventure 1">
+        <h3>Playing in the Park</h3>
+      </div>
+      <div class="card">
+        <img src="tea.jpg" alt="Adventure 2">
+        <h3>Exploring Nature</h3>
+      </div>
+      <div class="card">
+        <img src="study.jpg" alt="Adventure 3">
+        <h3>Learning with Fun</h3>
+      </div>
+      <div class="card">
+        <img src="fun1.jpg" alt="Superhero">
+        <h3>My Favorite Hero</h3>
+      </div>
+      <div class="card">
+        <img src="fun.jpg" alt="Toys">
+        <h3>Toys Collection</h3>
+      </div>
+    </div>
+  </section>  <section id="stories" class="section">
+    <h2>Stories & Fun 🧸</h2>
+    <p>Coming soon! Arush will share funny poems, superhero tales, toy adventures, and amazing stories here. Stay tuned!</p>
+  </section>  <section id="contact" class="section">
+    <h2>Contact 💌</h2>
+    <p>Want to say hi or support Arush’s adventures? Fill the form below:</p>
+    <form name="contact-form" method="POST" action="https://script.google.com/macros/s/AKfycbxqza3kBIuk_03MOw_9aym2x83vdntTyGgWfZVkvr-xt9Pc7YQ23suQGH5qfs2UNOuT/exec">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <input type="tel" name="Mobile" placeholder="Your Mobile" required>
+      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>  <footer>
+    <p>© 2025 Adventures with Arush | Made with ❤️ for Kids</p>
+    <img class="superhero" src="coldcoffe.jpg" alt="Flying Superhero">
+  </footer>
+</body>
+</html>
